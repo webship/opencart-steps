@@ -1,0 +1,66 @@
+{
+  "name": "@webship-js/opencart-steps",
+  "version": "2.0.0",
+  "description": "Cucumber step definitions for OpenCart shops, a plugin for webship-js (Playwright and Cucumber): the storefront (categories, search, a product with options, the cart and its coupon, the checkout as a guest and as a customer), the customer's account (orders, the address book, the wish list) and the administration (the login and the dashboard, products and categories created, edited and deleted, an order and its status, the customers, coupons).",
+  "main": "tests/step-definitions/opencart-defaults.js",
+  "files": [
+    "tests/step-definitions/",
+    "tests/features/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "cucumber-js --config cucumber.js",
+    "test:dry": "cucumber-js --config cucumber.js --dry-run",
+    "test:examples": "node tests/check-examples.js",
+    "test:paths": "node tests/check-paths.js",
+    "test:must-fail": "node tests/check-must-fail.js",
+    "test:chromium": "BROWSER=chromium cucumber-js --config cucumber.js",
+    "test:firefox": "BROWSER=firefox cucumber-js --config cucumber.js",
+    "test:webkit": "BROWSER=webkit cucumber-js --config cucumber.js",
+    "test:headed": "HEADLESS=false cucumber-js --config cucumber.js",
+    "generate-reports": "generate-reports",
+    "test:fast": "SLOW_MO=0 cucumber-js --config cucumber.js"
+  },
+  "keywords": [
+    "webship-js",
+    "opencart",
+    "e-commerce",
+    "shop",
+    "cart",
+    "checkout",
+    "cucumber",
+    "cucumber-js",
+    "playwright",
+    "bdd",
+    "gherkin",
+    "step-definitions",
+    "e2e-testing"
+  ],
+  "author": "Webship.co",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webship/opencart-steps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webship/opencart-steps/issues"
+  },
+  "homepage": "https://github.com/webship/opencart-steps#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">= 24.0"
+  },
+  "peerDependencies": {
+    "webship-js": "^2.0.16"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.0",
+    "webship-js": "^2.0.16"
+  },
+  "overrides": {
+    "@cucumber/cucumber": "^12"
+  }
+}
