@@ -520,7 +520,11 @@ handle:
   only;
 - the demo's Apple Cinema 30" asks for a file among its options, and its name holds a double quote: the features use
   the Canon EOS 5D as the product with options;
-- the MacBook needs no shipping, so its checkout has no shipping method: the features order an iPhone.
+- the MacBook needs no shipping, so its checkout has no shipping method: the features order an iPhone;
+- the shop counts a fixed tax (the demo's "Eco Tax (-2.00)") once per line of the cart in its totals and in the cart
+  button, and once per item in the line's own total: one Red Canon EOS 5D reads "1 item(s) - $122.00"; two of them in
+  one line read "2 item(s) - $242.00" in the button and the totals ($200.00, VAT $40.00, Eco Tax $2.00), but $244.00
+  on the line. A total is read from the shop, never worked out from the price.
 
 ## License
 

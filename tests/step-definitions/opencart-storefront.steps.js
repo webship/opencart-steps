@@ -325,12 +325,13 @@ Then(/^the option "([^"]*)" should say "([^"]*)"$/, async function (label, expec
 });
 
 /**
- * The cart button of the header reads its count and total ("1 item(s) - $122.00").
+ * The cart button of the header reads its count and total ("1 item(s) - $122.00"). Its total is the cart's: a fixed
+ * tax (the demo's Eco Tax) counts once per line of the cart, so two of one product read "2 item(s) - $242.00".
  *
  * Example #1: Then the cart button should read "1 item(s) - $122.00"
  * Example #2: Then the cart button should read "0 item(s) - $0.00"
  * Example #3: And the cart button should read "3 item(s)"
- * Example #4: Then the cart button should read "2 item(s) - $244.00"
+ * Example #4: Then the cart button should read "2 item(s) - $242.00"
  * Example #5: Then the cart button should read "$602.00"
  */
 Then(/^the cart button should read "([^"]*)"$/, async function (expected) {

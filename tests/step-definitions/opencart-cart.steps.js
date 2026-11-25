@@ -113,7 +113,8 @@ When(/^(?:I|we) remove "([^"]*)" from the cart$/, { timeout: 90000 }, async func
 
 /**
  * A total of the cart, by its label ("Sub-Total", "Eco Tax (-2.00)", "VAT (20%)", "Coupon (WEBSHIP10)",
- * "Total") and its value; or a total the cart does not show.
+ * "Total") and its value; or a total the cart does not show. A fixed tax counts once per line of the cart here,
+ * and once per item in a line's own total: the two do not always add up the same.
  *
  * Example #1: Then the cart should show "Sub-Total" as "$100.00"
  * Example #2: Then the cart should show "Total" as "$122.00"
